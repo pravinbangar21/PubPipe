@@ -1,4 +1,4 @@
-
+/*
 resource "aws_codebuild_project" "tf-plan" {
   name = "tf-cicd-plan2"
   description = "codebuild_project"
@@ -59,7 +59,7 @@ resource "aws_codebuild_project" "tf-apply" {
 
 }
 
-
+*/
 
 
 resource "aws_codepipeline" "cicd_pipeline" {
