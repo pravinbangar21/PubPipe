@@ -4,6 +4,6 @@ resource "aws_s3_bucket" "pipeline-artifacts" {
 }
 
 resource "aws_s3_bucket" "sample2" {
-  bucket = "test2"
+  bucket = "prins321-p1-est2"
   acl = "private"
 }
