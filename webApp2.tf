@@ -19,7 +19,7 @@ values = ["ami-010aff33ed5991201"]
 }
 
 // this section declares that we need a security group resource with its rules
-resource "aws_security_group" "allow_webapp_traffic2" {
+resource "aws_security_group" "allow_webapp_traffic" {
 name        = "allow_webapp_traffic"
 description = "Allow inbound traffic"
 
@@ -53,7 +53,7 @@ Name = "allow_my_laptop"
 resource "aws_instance" "webapp" {
 ami           = data.aws_ami.amazon_linux2_ami.id
 instance_type = "t2.micro"
-vpc_security_group_ids = [aws_security_group.allow_webapp_traffic2.id]
+vpc_security_group_ids = [aws_security_group.allow_webapp_traffic.id]
 key_name = "linux8p1"
 
 user_data = <<-EOF
