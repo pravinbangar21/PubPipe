@@ -20,7 +20,7 @@ values = ["ami-010aff33ed5991201"]
 
 // this section declares that we need a security group resource with its rules
 resource "aws_security_group" "allow_webapp_traffic" {
-name        = "allow_webapp_traffic"
+#name        = "allow_webapp_traffic"
 description = "Allow inbound traffic"
 
 ingress {
@@ -62,7 +62,7 @@ user_data = <<-EOF
             sudo yum install httpd -y
             sudo service httpd start
             sudo chkconfig httpd on
-            echo "<html><h1>hi...pravin..Your terraform deployment worked !!!</h1></html>" | sudo tee /var/www/html/index.html
+            echo "<html><h1>hi...pravin.b.Your terraform deployment worked !!!</h1></html>" | sudo tee /var/www/html/index.html
             hostname -f >> /var/www/html/index.html
             EOF
 
