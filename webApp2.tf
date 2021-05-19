@@ -7,11 +7,6 @@ required_providers {
 }
 }
 
-# Configure the AWS Provider
-provider "aws" {
-region = "ap-south-1"
-}
-
 // this section declares the query to get ami info out of AWS
 data "aws_ami" "amazon_linux2_ami" {
 most_recent = true
