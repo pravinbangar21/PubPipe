@@ -1,3 +1,8 @@
+
+provider "aws" {
+  region = "ap-south-1"
+}
+
 /*
 provider "aws" {
   access_key = "var.AWS_ACCESS_KEY"
