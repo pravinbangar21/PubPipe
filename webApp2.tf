@@ -7,18 +7,18 @@ required_providers {
 }
 }
 
-// this section declares the query to get ami info out of AWS
+
 data "aws_ami" "amazon_linux2_ami" {
 most_recent = true
 owners = ["amazon"]
 
 filter {
 name = "image-id"
-values = ["ami-010aff33ed5991201"]
+values = ["ami-0ab4d1e9cf9a1215a"]
 }
 }
 
-// this section declares that we need a security group resource with its rules
+
 resource "aws_security_group" "allow_webapp_traffic" {
 #name        = "allow_webapp_traffic"
 description = "Allow inbound traffic"
@@ -49,7 +49,6 @@ Name = "allow_my_webapp"
 }
 }
 
-// this section declares that we need an aws instance along with its configuration
 resource "aws_instance" "webapp" {
 ami           = data.aws_ami.amazon_linux2_ami.id
 instance_type = "t2.micro"
