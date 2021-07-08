@@ -53,7 +53,7 @@ resource "aws_instance" "webapp" {
 ami           = data.aws_ami.amazon_linux2_ami.id
 instance_type = "t2.micro"
 vpc_security_group_ids = [aws_security_group.allow_webapp_traffic.id]
-key_name = "linux8p1"
+key_name = "webapp_nvirginia"
 
 user_data = <<-EOF
             #!/bin/bash
