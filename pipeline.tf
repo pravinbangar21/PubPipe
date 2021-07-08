@@ -14,11 +14,11 @@ resource "aws_codebuild_project" "tf-plan" {
     image = "hashicorp/terraform:0.14.2"
     type = "LINUX_CONTAINER"
     image_pull_credentials_type = "SERVICE_ROLE"
- /*   registry_credential {
+    registry_credential {
       credential = var.docker_credentials
       credential_provider = "SECRETS_MANAGER"
     }
-*/
+
   }
 
   source {
@@ -44,11 +44,11 @@ resource "aws_codebuild_project" "tf-apply" {
     image = "hashicorp/terraform:0.14.2"
     type = "LINUX_CONTAINER"
     image_pull_credentials_type = "SERVICE_ROLE"
- /*   registry_credential {
+    registry_credential {
       credential = var.docker_credentials
       credential_provider = "SECRETS_MANAGER"
     }
-*/
+
   }
 
   source {
