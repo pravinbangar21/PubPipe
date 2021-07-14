@@ -8,3 +8,4 @@ phases:
   build:
     commands:
       - terraform apply --auto-approve
+      
