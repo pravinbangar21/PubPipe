@@ -14,7 +14,8 @@ owners = ["amazon"]
 
 filter {
 name = "image-id"
-values = ["ami-0ab4d1e9cf9a1215a"]
+#values = ["ami-0ab4d1e9cf9a1215a"]
+values = ["ami-010aff33ed5991201"]
 }
 }
 
@@ -53,8 +54,9 @@ resource "aws_instance" "webapp" {
 ami           = data.aws_ami.amazon_linux2_ami.id
 instance_type = "t2.micro"
 vpc_security_group_ids = [aws_security_group.allow_webapp_traffic.id]
-key_name = "webapp_nvirginia"
-
+  
+#key_name = "webapp_nvirginia"
+key_name = "linux8p1"
 user_data = <<-EOF
             #!/bin/bash
             sudo yum update -y
