@@ -8,7 +8,7 @@ resource "aws_codebuild_project" "tf-plan" {
   artifacts {
     type = "CODEPIPELINE"
   }
-
+/*
   environment {
     compute_type = "BUILD_GENERAL1_SMALL"
     image = "hashicorp/terraform:latest"
@@ -18,7 +18,7 @@ resource "aws_codebuild_project" "tf-plan" {
       credential = var.docker_credentials
       credential_provider = "SECRETS_MANAGER"
     }
-
+*/
   }
 
   source {
@@ -38,7 +38,7 @@ resource "aws_codebuild_project" "tf-apply" {
   artifacts {
     type = "CODEPIPELINE"
   }
-
+/*
   environment {
     compute_type = "BUILD_GENERAL1_SMALL"
     image = "hashicorp/terraform:latest"
@@ -48,7 +48,7 @@ resource "aws_codebuild_project" "tf-apply" {
       credential = var.docker_credentials
       credential_provider = "SECRETS_MANAGER"
     }
-
+*/
   }
 
   source {
