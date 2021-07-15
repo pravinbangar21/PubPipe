@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket = "code-pipeline-p21"
+    bucket = ""p-pipeline21"
     encrypt = true
     key = "terraform.tfstate"
-    region = "us-east-1"
+    region = "ap-south-1"
   }
 }
